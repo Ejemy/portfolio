@@ -20,7 +20,7 @@ span {
 
 .about-author h1 {
   display: inline-block;
-  inline-size: 45%;
+  inline-size: 60%;
   font-size: 6em;
   position: relative;
   left: 30%;
@@ -29,7 +29,7 @@ span {
   text-align: center;
 }
 .author-name {
-  padding: 10em 0 0 0;
+  padding: 5em 0 0 0;
   width: 50%;
 }
 
@@ -37,10 +37,10 @@ span {
 .author-name {
   position: relative;
   left: 20%;
-  padding: 10em 0 0 0;
+  padding: 5em 0 0 0;
 }
 .about-works {
-  padding: 20em 0 0 0;
+  padding: 5em 0 0 0;
 }
 .author-blurb {
   margin: 0;
@@ -50,10 +50,10 @@ span {
 }
 
 .work {
-  height: 150vh;
+  height: 130vh;
   margin: auto;
   width: 60%;
-  padding: 0 0 15em 0;
+  padding: 0 0 5em 0;
 }
 
 .work img {
