@@ -10,12 +10,41 @@ h1,
 h2,
 h3,
 p,
-span {
+span,
+#contact {
+  color: white;
+}
+
+nav {
+  position: sticky;
+  top: 50%;
+  left: 5%;
+  font-size: 2em;
+}
+
+.wrapper,
+.wrapper2 {
+  transition-duration: 200ms;
+  width: 1.5em;
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.wrapper:hover {
+  width: 2em;
+}
+.wrapper2:hover {
+  width: 6em;
+}
+
+.show {
   color: white;
 }
 
 .about-author {
-  height: 100vh;
+  height: 130vh;
 }
 
 .about-author h1 {
@@ -87,6 +116,24 @@ span {
   border-radius: 20px;
   box-shadow: 5px 3px 3px;
   transition-duration: 500ms;
+}
+
+.contact-me {
+  position: sticky;
+  top: 45%;
+  left: 45%;
+  width: 30%;
+  background-color: white;
+  opacity: 0;
+  z-index: 5;
+}
+
+.show-me {
+  filter: blur(0);
+  opacity: 1;
+}
+.blur {
+  filter: blur(3px);
 }
 
 .work h3,
