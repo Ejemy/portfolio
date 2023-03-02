@@ -20,7 +20,7 @@ $(document).ready(function () {
     }
   });
 
-  $(window).on("scroll", function () {
+  $(window).on("scroll", function (e) {
     if ($(window).scrollTop() > 300) {
       $(".wrapper").addClass("show");
     } else {
@@ -35,6 +35,13 @@ $(document).ready(function () {
         "300"
       );
     });
+    console.log($("img").position().top)
+    /*if($("img").position().top > 100){
+    $("img").css("filter", "blur(3px)");
+    } else{
+      $("img").css("filter", "blur(0)");
+    }
+    */
   });
 
   $(".wrapper2").click(function (e) {

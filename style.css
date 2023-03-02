@@ -142,10 +142,6 @@ p {
   pointer-events: none;
 }
 
-.work:hover > img {
-  filter: blur(3px);
-}
-
 .work:active > h3 {
   opacity: 0;
   left: 40%;
@@ -154,8 +150,10 @@ p {
   z-index: -1;
 }
 
-.work:hover > p {
-  top: -30%;
-  opacity: 1;
-  padding: 2em;
+ .low-enough {
+  filter: blur(3px);
+
 }
+top: -30%;
+opacity: 1;
+padding: 2em;
