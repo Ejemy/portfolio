@@ -20,6 +20,33 @@ $(document).ready(function () {
     }
   });
 
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() > 300) {
+      $(".wrapper").addClass("show");
+    } else {
+      $(".wrapper").removeClass("show");
+    }
+    $("#top").on("click", function (e) {
+      e.preventDefault();
+      $("html, body").stop().animate(
+        {
+          scrollTop: 0
+        },
+        "300"
+      );
+    });
+  });
+
+  $(".wrapper2").click(function (e) {
+    $(".contact-me").addClass("show-me");
+    $("html, body").addClass("blur");
+    $(".contact-me").removeClass("blur");
+  });
+  $("#close").on("click", function (e) {
+    $(".contact-me").removeClass("show-me");
+    $("html, body").removeClass("blur");
+  });
+
   /*setInterval(() => {
     var x = ($(".work h3").position().top / $(".work").height()) * 100;
 
