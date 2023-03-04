@@ -151,9 +151,7 @@ p {
 }
 
  .low-enough {
-  filter: blur(3px);
-
+  top: -30%;
+  opacity: 1;
+  padding: 2em;
 }
-top: -30%;
-opacity: 1;
-padding: 2em;
