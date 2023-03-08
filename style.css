@@ -15,6 +15,11 @@ span,
   color: white;
 }
 
+#message:hover, input:hover{
+  cursor: default;
+}
+
+
 nav {
   position: sticky;
   top: 50%;
@@ -34,9 +39,11 @@ nav {
 
 .wrapper:hover {
   width: 2em;
+  cursor: default;
 }
 .wrapper2:hover {
   width: 6em;
+  cursor: default;
 }
 
 .show {
@@ -120,17 +127,28 @@ nav {
 
 .contact-me {
   position: sticky;
-  top: 45%;
-  left: 45%;
+  top: 25%;
+  left: 25%;
   width: 30%;
   background-color: white;
   opacity: 0;
   z-index: 5;
+  transition-duration: 500ms;
+  padding: 2em;
+
+}
+
+#message{
+  height: 5em;
+  width: 80%;
 }
 
 .show-me {
   filter: blur(0);
   opacity: 1;
+  box-shadow: 5px 5px 3px;
+  border-radius: 20px;
+  font-size: 2em;
 }
 .blur {
   filter: blur(3px);
