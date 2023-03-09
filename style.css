@@ -22,9 +22,13 @@ span,
 
 nav {
   position: sticky;
-  top: 50%;
-  left: 5%;
+  top: 40%;
   font-size: 2em;
+  width: 20%;
+}
+
+nav, .contact-me{
+  z-index: 6;
 }
 
 .wrapper,
@@ -35,6 +39,7 @@ nav {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  padding: 1em 0;
 }
 
 .wrapper:hover {
@@ -50,35 +55,49 @@ nav {
   color: white;
 }
 
-.about-author {
-  height: 130vh;
+.about-author{
+  height: 90vh;
+  position: relative;
+  top: -15em;
 }
 
 .about-author h1 {
-  display: inline-block;
-  inline-size: 60%;
+  display: flex;
   font-size: 6em;
   position: relative;
   left: 30%;
+  margin: 0;
+  width: 70%;
 }
 .whoami {
   text-align: center;
 }
-.author-name {
-  padding: 5em 0 0 0;
-  width: 50%;
-}
 
-.about-works span,
-.author-name {
+
+.about-works span {
   position: relative;
   left: 20%;
-  padding: 5em 0 0 0;
 }
+
+
+.author-name {
+  display:inline;
+  position: sticky;
+  top: 90%;
+  left: 20%;
+  height: 50%;
+  width: 50%;
+  font-size: 4em;
+}
+
+
 .about-works {
+  display: inline-block;
   padding: 5em 0 0 0;
+  margin: 5em 0;
 }
 .author-blurb {
+  top: 60%;
   margin: 0;
   width: 40%;
   position: relative;
@@ -86,10 +105,10 @@ nav {
 }
 
 .work {
-  height: 130vh;
+  height: 100vh;
   margin: auto;
   width: 60%;
-  padding: 0 0 5em 0;
+
 }
 
 .work img {
@@ -101,7 +120,7 @@ nav {
 .work h3 {
   position: sticky;
   opacity: 1;
-  top: 20%;
+  top: 10%;
   left: 30%;
   display: inline-block;
   text-align: center;
@@ -132,7 +151,6 @@ nav {
   width: 30%;
   background-color: white;
   opacity: 0;
-  z-index: 5;
   transition-duration: 500ms;
   padding: 2em;
 
@@ -140,7 +158,6 @@ nav {
 
 #message{
   height: 5em;
-  width: 80%;
 }
 
 .show-me {
@@ -172,4 +189,10 @@ p {
   top: -30%;
   opacity: 1;
   padding: 2em;
+}
+
+#name, #email, #message{
+  margin: 0.5em;
+  padding:0.2em;
+  width: 90%;
 }

@@ -54,9 +54,9 @@ $(document).ready(function () {
       var blurstrength = (half / -50) / 2;
       
       
-      if(half < -100){
+      if(half < -200){
        $(this).css({
-        "filter": "blur(3px)",
+        "filter": "blur(2px)",
         "opacity": "0.5"
     });;
       $(this).siblings("p").css({"top": "-30%",
@@ -75,15 +75,22 @@ $(document).ready(function () {
     
     
   });
-
+  var truthy = true;
   $(".wrapper2").click(function (e) {
     $(".contact-me").addClass("show-me");
     $("body >*:not(.contact-me)").addClass("blur");
+    truthy = false;
     
   });
-  $("#close").on("click", function (e) {
-    $(".contact-me").removeClass("show-me");
-    $("body >*:not(.contact-me)").removeClass("blur");
+  
+  $("#close, .work >*:not(ul)").on("click", function (e) {
+
+    if($(!truthy)){
+      $(".contact-me").removeClass("show-me");
+      $("body >*:not(.contact-me)").removeClass("blur");
+      truthy = true;
+    }
+    
   });
 
   /*setInterval(() => {
