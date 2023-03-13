@@ -4,14 +4,14 @@ $(document).ready(function () {
     event.stopPropagation();
 
     switch (event.target.id) {
-      case "one":
+      case "one" && truthy:
         window.open(
           "https://GroceryList-with-users.ejemy1.repl.co",
           "_blank",
           "noreferrer"
         );
         break;
-      case "two":
+      case "two" && truthy:
         window.open(
           "https://github.com/Ejemy/it_ticketing_system",
           "_blank",
@@ -58,18 +58,22 @@ $(document).ready(function () {
        $(this).css({
         "filter": "blur(2px)",
         "opacity": "0.5"
-    });;
-      $(this).siblings("p").css({"top": "-30%",
-        "opacity": 1,
-        "padding": "2em"});
+    });
+      $(this).siblings("p").css({
+        "visibility":"visible",
+        "top": "-20em",
+        "padding": "2em"
+      });
       } else{
         $(this).css({
           "filter": "blur(0px)",
           "opacity": "0.5"
       });
-        $(this).siblings("p").css({"top": "-20%",
-        "opacity": 0,
-        "padding": "1em"});
+        $(this).siblings("p").css({
+          "visibility":"hidden",
+          "top": "0em",
+          "padding": "0em"
+        })
       }
     })
     
@@ -83,7 +87,7 @@ $(document).ready(function () {
     
   });
   
-  $("#close, .work >*:not(ul)").on("click", function (e) {
+  $("#close, body >*").not("nav, .contact-me*").on("click", function (e) {
 
     if($(!truthy)){
       $(".contact-me").removeClass("show-me");
@@ -92,17 +96,57 @@ $(document).ready(function () {
     }
     
   });
+  var fields = {};
+  $("form").on("submit", function(e){
+    e.preventDefault();
+    fields.name = $("name");
+    fields.email = $("email");
+    fields.message = $("message");
 
-  /*setInterval(() => {
-    var x = ($(".work h3").position().top / $(".work").height()) * 100;
 
-    console.log(x);
-    if (x >= 149) {
-      $(".work h3")
-        .css("text-decoration", "underline");
-    } else {
-      $(".work h3").css("text-decoration", "none");
+    const isValid = function(){
+      if(!notEmpty(fields)){
+        $("#returnmessage").text("No empty fields please!");
+        return false;
+      }
+      else if(!validEmail(fields.email)){
+        $("#returnmessage").text("Email is invalid!");
+        return false;
+      }
+      else{
+        $("#returnmessage").text("Sending!");
+        return true
+      }
+
     }
-  }, 20);
-  */
+    const validEmail = function(email){
+      let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+      console.log("valid email?")
+      regex.test(String.email.toLowerCase());
+    }
+    const notEmpty = function(value){
+      console.log("not empty?")
+      if(value.name == "" || value.message == ""){
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    if(isValid){
+      var formData = $("form").serialize();
+      console.log(formData)
+      $.ajax({
+        type: 'POST',
+        data: formData
+    })
+    .done(function(res){
+      $("#email").val(" ");
+      $("#name").val(" ");
+      $("#message").val(" ");
+    })
+    }
+  })
+  
+
 });

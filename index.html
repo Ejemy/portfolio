@@ -36,7 +36,7 @@
   </nav>
   <div class="contact-me">
 
-    <form>
+    <form method="post" action="mailer.php>
       <p id="returnmessage"></p>
       <label>Name:</label>
       <input type="text" id="name" placeholder="John Doe"></input></br>
@@ -44,8 +44,8 @@
       <input type="text" id="email" placeholder="JohnDoe@someEmail.com"></input></br>
       <label>Message:</label>
       <textarea id="message" placeholder="Message here....."></textarea></br>
-      <input type="button" id="sendButton" value="Send" />
-      <input type="button" id="close" value="Close" />
+      <input type="button" id="sendButton" value="Send" class="button"/>
+      <input type="button" id="close" value="Close" class="button"/>
     </form>
   </div>
 
@@ -70,7 +70,7 @@
     <div class="work" id="one">
       <h3 id="h3">Grocer App</h3>
       <img id="image" src="https://drive.google.com/uc?export=view&id=1groUGO269wFlXRBEjYLF-Djg8WZ4Altx" />
-      <p id="text">A simple grocery list app I made for my wife and I. It can create user accounts (using MongoDB) so that every user can have a unique shopping list.</p>
+      <p id="text">A simple, mobile-focused, grocery list app I made for my wife and I. It can create user accounts (using MongoDB) so that every user can have a unique shopping list.</p>
     </div>
     <div class="work" id="two">
       <h3>IT Ticketing System</h3>
