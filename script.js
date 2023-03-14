@@ -96,54 +96,57 @@ $(document).ready(function () {
     }
     
   });
-  var fields = {};
   $("form").on("submit", function(e){
     e.preventDefault();
-    fields.name = $("name");
-    fields.email = $("email");
-    fields.message = $("message");
-
-
-    const isValid = function(){
-      if(!notEmpty(fields)){
-        $("#returnmessage").text("No empty fields please!");
-        return false;
-      }
-      else if(!validEmail(fields.email)){
-        $("#returnmessage").text("Email is invalid!");
-        return false;
-      }
-      else{
+    var formData = new FormData(document.getElementById("form"));
+    console.log(formData)
+    var fields = {};
+    for(const [key, value] of formData){
+      fields[key] = value;
+    }
+    console.log(fields)
+    const isValid = function(obj){
+      if(validEmail(obj.email) && notEmpty(obj)){
         $("#returnmessage").text("Sending!");
         return true
       }
-
     }
     const validEmail = function(email){
-      let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+      console.log(email)
+      let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       console.log("valid email?")
-      regex.test(String.email.toLowerCase());
+      if(!regex.test(email.toLowerCase())){
+        $("#returnmessage").text("Email is invalid!");
+        return false;
+      } 
+      console.log("email good")
+      return true;
+      
     }
     const notEmpty = function(value){
       console.log("not empty?")
       if(value.name == "" || value.message == ""){
-        return false;
-      } else {
-        return true;
-      }
+        $("#returnmessage").text("No empty fields please!");
+        return false
+      } 
+      console.log("no empty fields OK")
+      return true;
     }
 
-    if(isValid){
-      var formData = $("form").serialize();
-      console.log(formData)
-      $.ajax({
-        type: 'POST',
-        data: formData
-    })
-    .done(function(res){
-      $("#email").val(" ");
-      $("#name").val(" ");
-      $("#message").val(" ");
+    if(isValid(fields)){
+      fetch(e.target.action,{
+        method: form.method,
+        body: JSON.stringify(fields),
+        headers: {
+            'Accept': 'application/json'
+        }
+      })
+    .then(response =>{
+      if(response.ok){
+        document.getElementById("form").reset();
+      } else{
+        response.json().then(data=>{data})
+      }
     })
     }
   })
