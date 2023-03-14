@@ -2,22 +2,28 @@ import * as mathjs from "https://cdn.skypack.dev/mathjs@11.6.0";
 $(document).ready(function () {
   $("#works").click(function (event) {
     event.stopPropagation();
-
-    switch (event.target.id) {
-      case "one" && truthy:
-        window.open(
-          "https://GroceryList-with-users.ejemy1.repl.co",
-          "_blank",
-          "noreferrer"
-        );
-        break;
-      case "two" && truthy:
-        window.open(
-          "https://github.com/Ejemy/it_ticketing_system",
-          "_blank",
-          "noreferrer"
-        );
-    }
+    if(!$(".contact-me").hasClass("show-me")){
+      switch(event.target.id){
+        case "one":window.open(
+        "https://GroceryList-with-users.ejemy1.repl.co",
+        "_blank",
+        "noreferrer"
+      )
+      break;
+      case "two": window.open(
+        "https://github.com/Ejemy/it_ticketing_system",
+        "_blank",
+        "noreferrer"
+      )
+      break;
+      case "three": window.open(
+        "https://github.com/Ejemy/portfolio",
+        "_blank",
+        "noreferrer"
+      )
+      break;
+      }
+    } 
   });
   
 
@@ -79,21 +85,15 @@ $(document).ready(function () {
     
     
   });
-  var truthy = true;
   $(".wrapper2").click(function (e) {
     $(".contact-me").addClass("show-me");
     $("body >*:not(.contact-me)").addClass("blur");
-    truthy = false;
     
   });
   
   $("#close, body >*").not("nav, .contact-me*").on("click", function (e) {
-
-    if($(!truthy)){
       $(".contact-me").removeClass("show-me");
       $("body >*:not(.contact-me)").removeClass("blur");
-      truthy = true;
-    }
     
   });
   $("form").on("submit", function(e){

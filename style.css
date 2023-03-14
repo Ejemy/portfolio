@@ -161,6 +161,7 @@ nav, .contact-me{
   opacity: 0;
   transition-duration: 500ms;
   padding: 2em;
+  z-index: -1;
 
 }
 
@@ -174,6 +175,7 @@ nav, .contact-me{
   box-shadow: 5px 5px 3px;
   border-radius: 20px;
   font-size: 2em;
+  z-index: 10;
 }
 .blur {
   filter: blur(3px);
