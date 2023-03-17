@@ -154,8 +154,9 @@ nav, .contact-me{
 
 .contact-me {
   position: sticky;
+  height: 25%;
   margin: auto;
-  top: 25%;
+  top: 10%;
   left: 25%;
   width: 30%;
   background-color: white;
@@ -203,13 +204,17 @@ p {
   width: 90%;
 }
 
+.buttons{
+  text-align:center;
+}
+
 .button{
   background-color: black;
   color: white;
   box-shadow: 2px 2px 5px grey;
   border-radius: 10px;
   font-size: 1em;
-  margin: 0 2em;
+  margin: 0 auto;
   
 }
 
@@ -257,4 +262,30 @@ p {
    50% { transform: translate(0px, 2px); }
    75% { transform: translate(0px, -2px); }
    100% { transform: translate(0px, 2px); }
+}
+
+
+@media screen and (min-width: 600px){
+  body{
+    width: auto;
+    height:100%;
+  }
+
+  .about-author{
+    height: 100vh;
+  }
+
+  .author-blurb{
+    padding: 7em 0;
+  }
+
+  .about-works{
+    padding: 20em 0 0 0;
+  }
+
+  .about-works img{
+    width: 110%;
+  }
+
+
 }
