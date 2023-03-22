@@ -264,7 +264,11 @@ p {
    100% { transform: translate(0px, 2px); }
 }
 
-
+@media screen and (max-width: 601px){
+  .about-works img{
+    width: 110%;
+  }
+}
 @media screen and (min-width: 600px){
   body{
     width: auto;
@@ -284,5 +288,5 @@ p {
   }
 
   .about-works img{
-    width: 110%;
+    width: 100%;
   }
