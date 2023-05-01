@@ -5,7 +5,7 @@ $(document).ready(function () {
     if(!$(".contact-me").hasClass("show-me")){
       switch(event.target.id){
         case "one":window.open(
-        "https://GroceryList-with-users.ejemy1.repl.co",
+        "https://github.com/Ejemy/GroceryList",
         "_blank",
         "noreferrer"
       )
@@ -18,6 +18,12 @@ $(document).ready(function () {
       break;
       case "three": window.open(
         "https://github.com/Ejemy/portfolio",
+        "_blank",
+        "noreferrer"
+      )
+      break;
+      case "four": window.open(
+        "https://github.com/Ejemy/PhotoShare",
         "_blank",
         "noreferrer"
       )
