@@ -69,6 +69,31 @@ nav, .contact-me{
   margin: 0;
   width: 70%;
 }
+
+.name-blurb {
+  height: 100vh;
+  margin: 0;
+  width: 100%;
+  font-size: 18px;
+  padding: 10em 0 0 0;
+}
+
+.fa-arrow-down {
+  color: white;
+  position: absolute;
+  left: 70%;
+  top: 40%;
+  font-size: 8em;
+  z-index: 10000;
+}
+
+.author-blurb {
+  width: 50%;
+  position: relative;
+  left: 40%;
+  top: 20%;
+}
+
 .whoami {
   text-align: center;
 }
@@ -83,11 +108,9 @@ nav, .contact-me{
 .author-name {
   display:inline;
   position: sticky;
-  top: 90%;
-  left: 20%;
-  height: 50%;
-  width: 50%;
   font-size: 4em;
+  top: 20%;
+  left: 20%;
 }
 
 
@@ -96,14 +119,9 @@ nav, .contact-me{
   padding: 5em 0 0 0;
   margin: 5em 0;
 }
-.author-blurb {
-  top: 60%;
-  margin: 0;
-  width: 40%;
-  position: relative;
-  left: 30%;
-  font-size: 18px;
-}
+
+
+
 
 .work {
   height: 100%;
@@ -143,8 +161,9 @@ nav, .contact-me{
   visibility: hidden;
   position:relative;
   color: black;
-  width: 40%;
+  width: 60%;
   margin: auto;
+  margin-top: -25%;
   background-color: white;
   border: 3px black solid;
   border-radius: 20px;

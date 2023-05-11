@@ -39,7 +39,11 @@ $(document).ready(function () {
    
 
 
-
+    if($(document).scrollTop() > 100){
+      $(".fa-arrow-down").addClass("d-none")
+    } else {
+      $(".fa-arrow-down").removeClass("d-none")
+    }
     if ($(document).scrollTop() > 300) {
       $(".wrapper").addClass("show");
     } else {
