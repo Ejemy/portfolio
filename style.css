@@ -1,9 +1,14 @@
-html,
-body {
+html{
   margin: 0;
   width: 100%;
+  height: 100%;
   background-color: black;
   font-family: Josefin Sans, sans-serif;
+  overflow: hidden;
+}
+body{
+  height: 100%;
+  overflow: auto;
 }
 
 h1,
@@ -131,6 +136,7 @@ nav, .contact-me{
 .work {
   height: 100%;
   margin: auto;
+  margin-bottom: 8em;
   width: 60%;
   text-align:center;
 }
@@ -294,10 +300,7 @@ p {
     margin: auto;
     width: 100vw;
   }
-  .about-works img{
-    width:100%;
 
-  }
   .about-author{
     display: block;
     
@@ -307,6 +310,12 @@ p {
     font-size: 2em;
   }
 
+  .about-works{
+    display:inline;
+    position: relative;
+    top: 20%;
+    
+  }
 
   .about-works span {
     position: relative;
@@ -316,7 +325,7 @@ p {
   nav {
     position: sticky;
     font-size: 1em;
-    top: 0%;
+    top: 0px;
     width: 100%;
     background-color: black;
   }
@@ -331,21 +340,38 @@ p {
 
   .name-blurb {
     margin: auto;
-    width: 100%;
+    width: 98%;
   }
 
   .author-blurb {
     width: 100%;
     left: 0;
+    font-size: 0.8em;
   }
+
+  .work{
+    width: 100%;
+    display: block;
+  }
+
   .work h3 {
     position: relative;
     left: -5%;
+    top: 0;
+    width: 90%;
   }
   .work p {
     width: 90%;
     padding: 0.4em;
     z-index: 5;
+    font-size:0.8em;
+  }
+  .work img {
+    width: 98%;
+  }
+  
+  .contact-me{
+    left:20%;
   }
   
 }

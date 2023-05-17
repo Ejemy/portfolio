@@ -33,18 +33,17 @@ $(document).ready(function () {
   });
   
 
-  $(document).on("scroll", function (e) {
+  $("body").on("scroll", function (e) {
     var top = $("#image").position().top;
 
    
 
-
-    if($(document).scrollTop() > 100){
+    if($("body").scrollTop() > 100){
       $(".fa-arrow-down").addClass("d-none")
     } else {
       $(".fa-arrow-down").removeClass("d-none")
     }
-    if ($(document).scrollTop() > 300) {
+    if ($("body").scrollTop() > 300) {
       $(".wrapper").addClass("show");
     } else {
       $(".wrapper").removeClass("show");
@@ -67,7 +66,6 @@ $(document).ready(function () {
       var half = imgtop - screenhalf;
       var blurstrength = (half / -50) / 2;
       var screenW = $(window).width();
-      
       
 
       if(half < -200 && screenW > 600){
@@ -102,13 +100,14 @@ $(document).ready(function () {
   $(".wrapper2").click(function (e) {
     $(".contact-me").addClass("show-me");
     $("body >*:not(.contact-me)").addClass("blur");
-    
+    $("body").css("overflow", "hidden");
   });
   
   $("#close, body >*").not("nav, .contact-me*").on("click", function (e) {
       $(".contact-me").removeClass("show-me");
       $("body >*:not(.contact-me)").removeClass("blur");
-    
+      $("body").css("overflow", "visible");
+
   });
   $("form").on("submit", function(e){
     e.preventDefault();
