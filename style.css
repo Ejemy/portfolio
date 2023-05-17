@@ -56,7 +56,6 @@ nav, .contact-me{
 }
 
 .about-author{
-  height: 90vh;
   position: relative;
   top: -15em;
 }
@@ -72,17 +71,18 @@ nav, .contact-me{
 
 .name-blurb {
   height: 100vh;
-  margin: 0;
+  margin: auto;
   width: 100%;
   font-size: 18px;
-  padding: 10em 0 0 0;
+  position: relative;
+  top: -2em;
 }
 
 .fa-arrow-down {
   color: white;
   position: absolute;
   left: 70%;
-  top: 40%;
+  top: 150%;
   font-size: 8em;
   z-index: 10000;
 }
@@ -92,6 +92,9 @@ nav, .contact-me{
   position: relative;
   left: 40%;
   top: 20%;
+  z-index: 10;
+  background-color: black;
+  padding: 0.5em;
 }
 
 .whoami {
@@ -111,6 +114,8 @@ nav, .contact-me{
   font-size: 4em;
   top: 20%;
   left: 20%;
+  background-color:black;
+  border-radius: 20px;
 }
 
 
@@ -284,6 +289,11 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
+
+  html, body {
+    margin: auto;
+    width: 100vw;
+  }
   .about-works img{
     width:100%;
 
@@ -296,8 +306,11 @@ p {
     position: relative;
     font-size: 2em;
   }
+
+
   .about-works span {
-    position: absolute;
+    position: relative;
+    left: 1%;
   }
 
   nav {
@@ -315,6 +328,26 @@ p {
   .wrapper, .wrapper2 {
     padding: 1em;
   }
+
+  .name-blurb {
+    margin: auto;
+    width: 100%;
+  }
+
+  .author-blurb {
+    width: 100%;
+    left: 0;
+  }
+  .work h3 {
+    position: relative;
+    left: -5%;
+  }
+  .work p {
+    width: 90%;
+    padding: 0.4em;
+    z-index: 5;
+  }
+  
 }
 
 

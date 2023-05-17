@@ -60,17 +60,17 @@ $(document).ready(function () {
     });
 
 
-
-
     $(".about-works img").each(function(){
 
       var screenhalf = $(window).height()/2;
       var imgtop =$(this).offset().top - $(document).scrollTop();
       var half = imgtop - screenhalf;
       var blurstrength = (half / -50) / 2;
+      var screenW = $(window).width();
       
       
-      if(half < -200){
+
+      if(half < -200 && screenW > 600){
        $(this).css({
         "filter": "blur(2px)",
         "opacity": "0.5"
@@ -80,7 +80,7 @@ $(document).ready(function () {
         "top": "-20em",
         "padding": "2em"
       });
-      } else{
+      } else if (half >= -200 && screenW > 600){
         $(this).css({
           "filter": "blur(0px)",
           "opacity": "0.5"
@@ -90,7 +90,11 @@ $(document).ready(function () {
           "top": "0em",
           "padding": "0em"
         })
-      }
+      } else {
+        $(this).siblings("p").css({
+          "visibility": "visible"
+        })
+      } 
     })
     
     
