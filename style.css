@@ -372,9 +372,12 @@ p {
   }
   
   .contact-me{
-    left:20%;
+    left:0;
   }
-  
+  .show-me{
+    width: 60%;
+    height: 60%;
+  }
 }
 
 
