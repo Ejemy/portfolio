@@ -10,6 +10,7 @@ In the meantime I use **Formspree** to handle the contact form.
 その間、＊＊Formspree＊＊を使用して、お問い合わせフォームを処理しています。
 
 ## Github Pages
-##こちらでページをご覧いただけます。
+## こちらでページをご覧いただけます。
+
 https://ejemy.github.io/portfolio/
 
