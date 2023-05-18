@@ -106,7 +106,7 @@ $(document).ready(function () {
   $("#close, body >*").not("nav, .contact-me*").on("click", function (e) {
       $(".contact-me").removeClass("show-me");
       $("body >*:not(.contact-me)").removeClass("blur");
-      $("body").css("overflow", "visible");
+      $("body").css("overflow", "auto");
 
   });
   $("form").on("submit", function(e){

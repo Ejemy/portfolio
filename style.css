@@ -118,7 +118,7 @@ nav, .contact-me{
   position: sticky;
   font-size: 4em;
   top: 20%;
-  left: 20%;
+  left: 15%;
   background-color:black;
   border-radius: 20px;
 }
@@ -184,7 +184,7 @@ nav, .contact-me{
 
 .contact-me {
   position: sticky;
-  height: 25%;
+  height: 40%;
   margin: auto;
   top: 10%;
   left: 25%;
