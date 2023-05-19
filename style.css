@@ -62,7 +62,9 @@ nav, .contact-me{
 
 .about-author{
   position: relative;
-  top: -15em;
+    top: -50%;
+    width: 80%;
+    margin: auto;
 }
 
 .about-author h1 {
@@ -80,7 +82,7 @@ nav, .contact-me{
   width: 100%;
   font-size: 18px;
   position: relative;
-  top: -2em;
+  top: -20%;
 }
 
 .fa-arrow-down {
@@ -377,6 +379,10 @@ p {
   .show-me{
     width: 60%;
     height: 60%;
+  }
+
+  .author-name{
+    font-size: 3em;
   }
 }
 
