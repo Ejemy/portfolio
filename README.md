@@ -7,7 +7,7 @@ In the meantime I use **Formspree** to handle the contact form.
 
 このポートフォリオウェブサイトは、HTML、CSS、およびJQueryを使用して作成されました。
 お問い合わせフォームを介して私にメールを送信するためのPHPファイルがありますが、Githubは静的ページのみをサポートするため、このウェブページを他の場所でホストするまでmailer.phpファイルは使用できません。
-その間、＊＊Formspree＊＊を使用して、お問い合わせフォームを処理しています。
+その間、**Formspree**を使用して、お問い合わせフォームを処理しています。
 
 ## Github Pages
 ## こちらでページをご覧いただけます。
