@@ -2,6 +2,7 @@ import * as mathjs from "https://cdn.skypack.dev/mathjs@11.6.0";
 $(document).ready(function () {
   $("#works").click(function (event) {
     event.stopPropagation();
+    /*
     if(!$(".contact-me").hasClass("show-me")){
       switch(event.target.id){
         case "one":window.open(
@@ -30,14 +31,32 @@ $(document).ready(function () {
       break;
       }
     } 
+    */
   });
-  
+  var pswitch = true;
+  $(".work").click(function(e){
+    var anchor = $(this).children("a");
+    if(!$(e.target).is(anchor)) {
+      pswitch = !pswitch
+    }
+    if(!pswitch){
+      $(this).children("p").css({
+        "opacity":"1",
+        "top": "-20em",
+        "padding": "2em"
+      });
+      $(this).children("h3").addClass("happyanimation");
+    } else {
+      $(this).children("p").css({
+        "opacity":"0",
+        "top": "0",
+        "padding": "0"
+      });
+      $(this).children("h3").removeClass("happyanimation");
+    }
+  })
 
   $("body").on("scroll", function (e) {
-    var top = $("#image").position().top;
-
-   
-
     if($("body").scrollTop() > 100){
       $(".fa-arrow-down").addClass("d-none")
     } else {
@@ -58,7 +77,7 @@ $(document).ready(function () {
       );
     });
 
-
+    /*
     $(".about-works img").each(function(){
 
       var screenhalf = $(window).height()/2;
@@ -94,13 +113,24 @@ $(document).ready(function () {
         })
       } 
     })
-    
-    
+    */
+  
   });
+ 
   $(".wrapper2").click(function (e) {
-    $(".contact-me").addClass("show-me");
-    $("body >*:not(.contact-me)").addClass("blur");
-    $("body").css("overflow", "hidden");
+    if($(this).attr("id") == "contact"){
+      $(".contact-me").addClass("show-me");
+      $("body >*:not(.contact-me)").addClass("blur");
+      $("body").css("overflow", "hidden");
+    } else{
+      window.open(
+        "https://github.com/Ejemy/",
+        "_blank",
+        "noreferrer"
+      )
+    }
+    
+    
   });
   
   $("#close, body >*").not("nav, .contact-me*").on("click", function (e) {
