@@ -154,9 +154,12 @@ nav, .contact-me{
   opacity: 50%;
   border-radius: 20px;
   height:100%;
-  width:100%;
-  object-fit: contain;
+  width:80%;
+  object-fit: cover;
+}
 
+.work img:hover{
+  box-shadow: 0px 0px 40px red;
 }
 .work h3 {
   position: sticky;
@@ -226,7 +229,6 @@ nav, .contact-me{
 }
 
 .work h3,
-img,
 p {
   pointer-events: none;
 }
@@ -302,101 +304,7 @@ p {
    75% { transform: translate(0px, -2px); }
    100% { transform: translate(0px, 2px); }
 }
-/*
-@media only screen and (max-width: 600px) {
 
-  html, body {
-    margin: auto;
-    width: 100vw;
-    height: 100vh;
-  }
-
-  .about-author{
-    display: block;
-    
-  }
-  .about-author h1{
-    position: relative;
-    font-size: 2em;
-  }
-
-  .about-works{
-    display:inline;
-    position: relative;
-    top: 20%;
-    
-  }
-
-  .about-works span {
-    position: relative;
-    left: 1%;
-  }
-
-  nav {
-    position: sticky;
-    font-size: 1em;
-    top: 0px;
-    width: 100%;
-    background-color: black;
-    z-index:100;
-  }
-
-  nav ul {
-    display: flex;
-  }
-
-  .wrapper, .wrapper2 {
-    padding: 3em;
-  }
-
-  .name-blurb {
-    margin: auto;
-    width: 98%;
-  }
-
-  .author-blurb {
-    width: 100%;
-    left: 0;
-    font-size: 0.8em;
-  }
-
-  .work{
-    width: 100%;
-    display: grid;
-  }
-
-  .work h3 {
-    position: relative;
-    left: -5%;
-    top: 0;
-    width: 90%;
-  }
-  .work p {
-    width: 90%;
-    padding: 0.4em;
-    z-index: 5;
-    font-size:0.8em;
-  }
-  .work img {
-    width: 98%;
-
-  }
-  .work button {
-    background-color: blue;
-  }
-  .contact-me{
-    left:0;
-  }
-  .show-me{
-    width: 60%;
-    height: 60%;
-  }
-
-  .author-name{
-    font-size: 3em;
-  }
-}
-*/
 
 @media only screen and (max-width: 600px) {
   html,body {
