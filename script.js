@@ -1,5 +1,15 @@
 import * as mathjs from "https://cdn.skypack.dev/mathjs@11.6.0";
 $(document).ready(function () {
+  var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
   $("#works").click(function (event) {
     event.stopPropagation();
     /*

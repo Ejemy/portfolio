@@ -442,7 +442,7 @@ p {
   }
 
   .author-blurb {
-    width: 100%;
+    width: 90%;
     left: 0;
     font-size: 0.8em;
   }
@@ -455,12 +455,7 @@ p {
     font-size: 2em;
   }
 
-  .about-works{
-    display:inline;
-    position: relative;
-    top: 20%;
-    
-  }
+  
 
   .about-works span {
     position: relative;
@@ -469,26 +464,29 @@ p {
 
   /* Modify the structure of the works section */
   .about-works {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0;
+    display: block;
+  
   }
   .about-works h2 {
     display: none;
   }
   .work {
+    width:100%;
     text-align: center;
+    margin: 1em auto;
+    
   }
 
   .work img {
     display: none;
   }
-
+  .work h3{
+    position:static;
+  }
   .work p{
-    margin:auto;
-    width: 70vw;
-    position: absolute;
-    left: 50%;
+    opacity: 1;
+    width: 90vw;
+    padding: 1em;
   }
 }
 
