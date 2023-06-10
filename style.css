@@ -155,7 +155,7 @@ nav, .contact-me{
 
 .about-works {
   display: inline-block;
-  
+  margin-top: 5em;
 }
 
 
@@ -239,7 +239,7 @@ nav, .contact-me{
 
 }
 .contact-me {
-  position: sticky;
+  position: absolute;
   height: 50%;
   margin: auto;
   top: 10%;
@@ -249,7 +249,7 @@ nav, .contact-me{
   opacity: 0;
   transition-duration: 500ms;
   padding: 2em;
-  z-index: -1;
+  z-index: 100000000;
 
 }
 
