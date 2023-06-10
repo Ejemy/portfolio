@@ -50,19 +50,19 @@ $(document).ready(function () {
       pswitch = !pswitch
     }
     if(!pswitch){
+      
       $(this).children("p").css({
         "opacity":"1",
         "top": "-20em",
         "padding": "2em"
       });
-      $(this).children("h3").addClass("happyanimation");
     } else {
+      
       $(this).children("p").css({
         "opacity":"0",
         "top": "0",
         "padding": "0"
       });
-      $(this).children("h3").removeClass("happyanimation");
     }
   })
 
