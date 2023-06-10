@@ -168,6 +168,8 @@ $(document).ready(function () {
         item.style.display = "block"
       })
     }
+    $("#globe").siblings("ul").css({"display": "none"})
+    globedisplay = !globedisplay;
   })
 
   $("#close, body >*").not("nav, .contact-me*").on("click", function (e) {

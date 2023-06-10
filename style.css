@@ -42,7 +42,8 @@ nav, .contact-me{
 
 .wrapper,
 .wrapper2,
-.translateul {
+.translateul,
+#globe {
   transition-duration: 200ms;
   width: 1.5em;
   text-align: center;
@@ -74,6 +75,7 @@ nav, .contact-me{
   flex-direction: column;
   font-size: small;
   list-style-type: none;
+  padding: 0;
 }
 .lang{
   padding:1em;
@@ -153,8 +155,7 @@ nav, .contact-me{
 
 .about-works {
   display: inline-block;
-  padding: 5em 0 0 0;
-  margin: 5em 0;
+  
 }
 
 
@@ -228,7 +229,15 @@ nav, .contact-me{
   transition-duration: 500ms;
 }
 
+.work button {
+  background-color: white;
+  color:black;
+  font-size: 0.5em;
+}
+.work button:active{
+  background-color: #FAF9F6;
 
+}
 .contact-me {
   position: sticky;
   height: 40%;
@@ -361,7 +370,18 @@ p {
   .translateul{
     flex-direction:column;
     position:absolute;
+    left: 70%;
+    top: 40%;
+  }
 
+  .lang{
+    background-color: black;
+    z-index: 50000;
+  }
+
+  #globe{
+    font-size: 1em;
+    margin: auto;
   }
 
   .wrapper, .wrapper2, .translateul {
@@ -427,8 +447,10 @@ p {
     width:100%;
     text-align: center;
     margin: 1em auto;
-    
+    display: block;
+  
   }
+
 
   .work img {
     display: none;
@@ -440,6 +462,7 @@ p {
     opacity: 1;
     width: 90vw;
     padding: 1em;
+    margin:auto;
   }
 
 
