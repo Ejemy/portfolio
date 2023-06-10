@@ -139,10 +139,37 @@ $(document).ready(function () {
         "noreferrer"
       )
     }
-    
-    
   });
+  var globedisplay = true;
+  $("#globe").click(function(e){
+    if(globedisplay){
+      $(this).siblings("ul").css({"display": "block"})
+    } else{
+      $(this).siblings("ul").css({"display": "none"})
+    }
+    globedisplay = !globedisplay
+  })
   
+  $(".lang").click(function(e){
+    let japanese = document.querySelectorAll("#jp");
+    let english = document.querySelectorAll("#en");
+    if($(this).attr("id") == "jpli"){
+      japanese.forEach(item=>{
+        item.style.display = "block"
+      })
+      english.forEach(item =>{
+        item.style.display = "none"
+      })
+    } else if($(this).attr("id")=="enli"){
+      japanese.forEach(item=>{
+        item.style.display = "none"
+      })
+      english.forEach(item =>{
+        item.style.display = "block"
+      })
+    }
+  })
+
   $("#close, body >*").not("nav, .contact-me*").on("click", function (e) {
       $(".contact-me").removeClass("show-me");
       $("body >*:not(.contact-me)").removeClass("blur");
