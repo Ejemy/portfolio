@@ -249,7 +249,7 @@ nav, .contact-me{
   opacity: 0;
   transition-duration: 500ms;
   padding: 2em;
-  z-index: 100000000;
+  z-index: -1;
 
 }
 
