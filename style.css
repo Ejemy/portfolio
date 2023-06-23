@@ -167,9 +167,18 @@ nav, .contact-me{
   text-align:center;
 }
 
-.work a {
+.wklink {
+  font-size: 1.3em;
+}
+
+
+.hyper {
   pointer-events:visible;
   font-size: 2em;
+}
+
+.hyper:active {
+  color: grey;
 }
 
 .work img {
@@ -228,6 +237,7 @@ nav, .contact-me{
   box-shadow: 5px 3px 3px;
   transition-duration: 500ms;
 }
+
 
 .work button {
   background-color: white;
