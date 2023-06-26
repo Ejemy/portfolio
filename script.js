@@ -46,24 +46,32 @@ $(document).ready(function () {
   var pswitch = true;
   $(".work").click(function(e){
     var anchor = $(this).children("a");
-    if(!$(e.target).is(anchor)) {
-      pswitch = !pswitch
-    }
-    if(!pswitch){
-      
+    if($(window).width() >= 700){
+      if(!$(e.target).is(anchor)) {
+        pswitch = !pswitch
+      }
+      if(!pswitch){
+        
+        $(this).children("p").css({
+          "opacity":"1",
+          "top": "-20em",
+          "padding": "2em"
+        });
+      } else {
+        
+        $(this).children("p").css({
+          "opacity":"0",
+          "top": "0",
+          "padding": "0"
+        });
+      }
+    } 
+    else {
       $(this).children("p").css({
-        "opacity":"1",
-        "top": "-20em",
-        "padding": "2em"
-      });
-    } else {
-      
-      $(this).children("p").css({
-        "opacity":"0",
-        "top": "0",
-        "padding": "0"
-      });
+        "opacity": "1"
+      })
     }
+    
   })
 
   $("body").on("scroll", function (e) {
